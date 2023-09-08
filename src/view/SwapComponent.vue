@@ -116,6 +116,7 @@ async function getTransactionFromServer() {
                     displaytrxns.push(elem)
                 }
             });
+            totalTXNS.value=unref(result).swaps.length
         }, 1000)
     } catch (e) {
 
