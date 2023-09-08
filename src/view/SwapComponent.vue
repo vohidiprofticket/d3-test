@@ -106,9 +106,8 @@ query{
 `
 async function getTransactionFromServer() {
     try {
-        const { error, loading, result } = useQuery(QUERY)
+        const { error, result } = useQuery(QUERY)
         err.value = unref(error)
-        load.value = unref(loading)
         setTimeout(() => {
             unref(result).swaps.forEach((elem, index) => {
                 alltransactions.push(elem)
